@@ -479,27 +479,32 @@ tempi = {
 }
 
 forceBreaks = {
+  % page 9 (partial)
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\pageBreak
   
+  % page 10
   \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\pageBreak
   
+  % page 11
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\pageBreak
   
+  % page 12
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\pageBreak
   
+  % page 13
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak

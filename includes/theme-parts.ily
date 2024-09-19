@@ -35,6 +35,9 @@ slurShapeL = \shape #'((0.5 . 2.25) (0 . 0.5) (0 . 0) (0 . 0)) \etc
 slurShapeM = \shape #'((0 . 1) (0 . -1) (0 . -1) (0 . 0)) \etc
 slurShapeN = \shape #'((0.5 . 2.5) (0 . 1) (0 . 0) (0 . 0)) \etc
 slurShapeO = \shape #'((0 . -2) (0 . 0) (0 . 0) (0 . 0)) \etc
+slurShapeP = \shape #'((0 . -0.5) (2 . 0) (0 . 0) (0 . 0)) \etc
+slurShapeQ = \shape #'((0 . 0) (2 . 0) (0 . 0) (0 . 0)) \etc
+slurShapeR = \shape #'((-0.75 . 0) (1 . 4) (0 . -2) (0 . 0)) \etc
 
 %%% Music %%%
 
@@ -238,15 +241,15 @@ rightHandUpper = \relative {
     \voiceTwo <gf,, ef'>32[^( bf] \voiceOne gf' bf[ f' ef])
     \voiceTwo <ef,, c'>[^( gf] \voiceOne ef' gf[ df' c])
     \voiceTwo <bf,, gf'>[^( ef] \voiceOne bf' ef[ af gf])
-    \vsd <gf,, ef'>32[^( bf] \vsu gf' bf[ f' ef])
+    \vsd <gf,, ef'>32[\slurShapeP ^( bf] \vsu gf' bf[ f' ef])
   } |
   \tuplet 3/2 16 { 
-    \vsd <f,, ef'>[^( c'] \vsu a' c[ f ef])
+    \vsd <f,, ef'>[-\slurShapeQ ^( c'] \vsu a' c[ f ef])
     \voiceTwo <bf, gf'>[^( ef] \voiceOne bf' ef[ af! gf])
-    \vsd <gf,, ef'>[^( bf] \vsu gf' bf[ f' ef])
-    \vsd <ef,, c'>[^( gf] \vsu ef' gf[ df' c])
-    \vsd <bf,, gf'>[^( ef] \vsu bf' ef[ af! gf])
-    \vsd <gf,, ef'>[^( bf] \vsu gf' bf[ f' ef]~
+    \vsd <gf,, ef'>[-\slurShapeP ^( bf] \vsu gf' bf[ f' ef])
+    \vsd <ef,, c'>[-\slurShapeQ ^( gf] \vsu ef' gf[ df' c])
+    \vsd <bf,, gf'>[-\slurShapeQ ^( ef] \vsu bf' ef[ af! gf])
+    \vsd <gf,, ef'>[-\slurShapeQ ^( bf] \vsu gf' bf[ f' ef]~
   } |
   <a, ef'>8) \tupletOn \tuplet 3/2 16 { 
     \voiceTwo ef'32[-\slurShapeO ^( gf] \voiceOne e f[ c' a]) }
@@ -257,7 +260,8 @@ rightHandUpper = \relative {
     \voiceTwo c,[^( gf'] \voiceOne e f[ c' a])
   } |
   \tuplet 3/2 16 {
-    \voiceTwo \staffDown f,32[^( \staffUp gf'!] \voiceOne e f[ c' a])
+    \voiceTwo \staffDown f,32[-\slurShapeR ^( \staffUp gf'!] \voiceOne 
+      e f[ c' a])
     \voiceTwo ef[^(^\rall g] \voiceOne e f[ c' a])
     \voiceTwo ef[^( g] \voiceOne e f[ c' a])
     \voiceTwo ef[^( g] \voiceOne e f[ c' a])
@@ -902,6 +906,7 @@ tempi = {
 }
 
 forceBreaks = {
+  % page 3
   \partial 8 s8\noBreak
   \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
@@ -909,36 +914,42 @@ forceBreaks = {
   \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 5 { s2.\noBreak } s2\noBreak s8\pageBreak
 
+  % page 4
   s8\noBreak \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\pageBreak
   
+  % page 5
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 4 { s2.\noBreak } s2\noBreak s8\break\noPageBreak
   s8\noBreak \repeat unfold 2 { s2.\noBreak } s2.\pageBreak
   
+  % page 6
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\pageBreak
   
+  % page 7
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\pageBreak
   
+  % page 8
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 2 { s2.\noBreak } s2.\break\noPageBreak
   \grace{ s8 } \repeat unfold 2 { s2.\noBreak } s2.\pageBreak
   
+  % page 9 (partial)
   s2.\noBreak s4.\break\noPageBreak
   s4.\noBreak s2.\break\noPageBreak
   s2.\noBreak \grace s8\break\noPageBreak

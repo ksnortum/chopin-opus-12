@@ -242,12 +242,14 @@ tempi = {
 }
 
 forceBreaks = {
+  % page 1
   \repeat unfold 2 { s1\noBreak } s1\break\noPageBreak
   \repeat unfold 3 { s1\noBreak } s1\break\noPageBreak
   \repeat unfold 2 { s1\noBreak } s1\break\noPageBreak
   \repeat unfold 2 { s1\noBreak } s1\break\noPageBreak
   \repeat unfold 2 { s1\noBreak } s1\pageBreak
   
+  % page 2
   \repeat unfold 2 { s1\noBreak } s1\break\noPageBreak
   \repeat unfold 2 { s1\noBreak } s1\break\noPageBreak
   \repeat unfold 2 { s1\noBreak } s1\break\noPageBreak
